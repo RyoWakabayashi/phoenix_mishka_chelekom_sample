@@ -88,7 +88,9 @@ defmodule PhoenixMishkaChelekomSampleWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components
-      import PhoenixMishkaChelekomSampleWeb.CoreComponents
+      import PhoenixMishkaChelekomSampleWeb.CoreComponents, except: [flash_group: 1]
+      import PhoenixMishkaChelekomSampleWeb.Components.Alert
+      import PhoenixMishkaChelekomSampleWeb.Components.Rating
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
